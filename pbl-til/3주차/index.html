@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>아기 사자 명단</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>아기 사자 명단</h1>
+
+<div class="controls">
+  <button id="toggleFormBtn">아기 사자 추가</button>
+  <button id="removeLastBtn">마지막 아기 사자 삭제</button>
+  <span class="count">총 <span id="countNum">0</span>명</span>
+</div>
+
+<form id="addForm">
+  <label>이름 <input name="name" required></label>
+  <label>파트
+    <select name="part" required>
+      <option value="Frontend">Frontend</option>
+      <option value="Backend">Backend</option>
+      <option value="Design">Design</option>
+    </select>
+  </label>
+  <label class="full">관심 기술 (쉼표로 구분) <input name="skills" placeholder="HTML, CSS, JavaScript" required></label>
+  <label class="full">한 줄 소개 <input name="oneLine" required></label>
+  <label class="full">자기소개 <textarea name="intro" rows="3" required></textarea></label>
+  <label>이메일 <input name="email" type="email"></label>
+  <label>전화번호 <input name="phone"></label>
+  <label class="full">웹사이트 <input name="website"></label>
+  <label class="full">한 마디 <input name="motto"></label>
+  <div class="buttons">
+    <button type="submit">추가하기</button>
+    <button type="button" id="cancelBtn">취소</button>
+  </div>
+</form>
+
+<div class="summary-list" id="summaryList"></div>
+<div class="detail-list" id="detailList"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

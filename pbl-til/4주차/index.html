@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사람추가</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>아기사자 명단</h1>
+
+    <div class="controls">
+        <button id="toggleFormBtn">아기 사자 추가</button>
+        <button id="removeLastBtn">마지막 아기 사자 삭제</button>
+        <span class="count">총 <span id="countNum">0</span>명</span>
+    </div>
+
+    <div class="controls">
+        <button id="add1">1명 추가하기</button>
+        <button id="add5">5명 추가하기</button>
+        <button id="reply">인원 새로고침 하기</button>
+    </div>
+
+    <form id="addForm">
+        <label>파트
+            <select name="part" required>
+                <option value="Frontend">Frontend</option>
+                <option value="Backend">Backend</option>
+                <option value="Design">Design</option>
+            </select>
+        </label>
+
+        <label>정렬
+            <select name="sort" required>
+                <option value="name">최신추가순</option>
+                <option value="part">파트순</option>
+            </select>
+        </label>
+
+        <label>이름<input name="name" placeholder="이름 입력" required></label>
+        <label>소개<input name="intro" placeholder="한 줄 소개 입력"></label>
+
+        <button type="submit">추가</button>
+    </form>
+
+    <div id="summaryList" class="summary-list"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
